@@ -1,0 +1,297 @@
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <meta content="#000000" name="theme-color">
+    <meta content="noindex" name="robots">
+    <title>[From The Classics You've Come To Expect]!!</title>
+    <link href="/assets/css/extra.css?1668902517" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <script crossorigin="anonymous"
+            integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"></script>
+        <script crossorigin="anonymous"
+            integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+        <div id="center">
+            <div class="fangamer-intro"><img alt="Fangamer" src="/assets/images/keygen-fangamer.png"></div>
+            <div class="bg-cover"></div>
+            <div class="fangamer-credits hidden"><a class="logo" href="https://www.fangamer.com" target="_blank"><img
+                        alt="Fangamer" class="start" src="/assets/images/keygen-fangamer.gif"><img alt="Fangamer"
+                        class="loop hidden" src="/assets/images/keygen-fangamer-loop.gif"></a>
+                <h2>Proudly Presents</h2>
+                <div class="wavy">
+                    <p>[From The Classics You've Come To Expect]!!</p>
+                </div>
+                <div id="marquee_container"></div>
+            </div>
+        </div>
+        <style>
+            .bg-cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: black;
+                opacity: 0.9;
+                pointer-events: none;
+                transition: opacity 0.5s ease-in-out;
+                z-index: 1;
+            }
+
+            #center.fangamer .bg-cover {
+                opacity: 0;
+            }
+
+            .fangamer-intro {
+                margin-top: -95px;
+                width: 400px;
+                max-width: 100%;
+                min-height: 320px;
+                max-height: 100%;
+                position: relative;
+                color: black;
+                cursor: pointer;
+                color: transparent;
+                z-index: 2;
+            }
+
+            .fangamer-intro img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+
+            .fangamer-intro:before {
+                content: "► PLAY";
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+                bottom: 30%;
+                color: white;
+                animation: blink 2s linear infinite;
+            }
+
+            .fangamer-credits .logo {
+                display: block;
+                width: 100%;
+                color: transparent;
+                z-index: 2;
+                position: relative;
+                height: 100px;
+            }
+
+            .fangamer-credits img {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .wavy {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-family: '8bitOperatorPlus-Regular', monospace;
+            }
+
+            .wavy .word {
+                display: inline-block;
+                position: relative;
+                letter-spacing: 1px;
+            }
+
+            @media only screen and (max-width: 500px) {
+                .wavy .word {
+                    letter-spacing: 0;
+                    font-size: 12px;
+                }
+            }
+
+            .wavy span {
+                animation: wavy 2s ease-in-out infinite;
+                display: inline-block;
+            }
+
+            .fangamer {
+                background-color: #2e4459;
+                animation: shiftBG 30s linear infinite;
+            }
+
+            #center {
+                transition: background-color 1s ease-out;
+                background-color: #2e4459;
+                background-image: url('/assets/images/keygen-bg.png');
+                background-size: 228.5px 268px;
+            }
+
+            h2 {
+                text-align: center;
+                animation: rainbow 6s ease-in-out infinite;
+                text-transform: uppercase;
+            }
+
+            .rainbow {
+                animation: rainbow 6s ease-in-out infinite;
+            }
+
+            #marquee_container {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin-top: 50px;
+                width: 100%;
+                height: 50px;
+                --gap: 1rem;
+                display: flex;
+                overflow: hidden;
+                user-select: none;
+                gap: var(--gap);
+                z-index: 10;
+                text-decoration: none;
+            }
+
+            .marquee {
+                min-height: 50px;
+                flex-shrink: 0;
+                display: flex;
+                justify-content: space-around;
+                min-width: 100%;
+                gap: var(--gap);
+                animation: scroll 40s linear infinite;
+                align-items: center;
+                text-transform: uppercase;
+            }
+
+            .credit-title {
+                padding-left: 2rem;
+            }
+
+            .credit-name {
+                font-family: '8bitOperatorPlus-Regular', monospace;
+            }
+
+            @keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+
+                39% {
+                    opacity: 1;
+                }
+
+                40% {
+                    opacity: 0;
+                }
+
+                59% {
+                    opacity: 0;
+                }
+
+                60% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes scroll {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(calc(-100% - var(--gap)));
+                }
+            }
+
+            @keyframes rainbow {
+                0% {
+                    color: #F4FFBF;
+                }
+
+                20% {
+                    color: #BDFFF0;
+                }
+
+                40% {
+                    color: #BEC5FF;
+                }
+
+                60% {
+                    color: #FFC6FD;
+                }
+
+                80% {
+                    color: #FDDAD1;
+                }
+
+                100% {
+                    color: #F4FFBF;
+                }
+            }
+
+            @keyframes shiftBG {
+                0% {
+                    background-position: 0px 0px;
+                    background-color: #2e4459;
+                }
+
+                20% {
+                    background-color: #2e5930;
+                }
+
+                40% {
+                    background-color: #55592e;
+                }
+
+                60% {
+                    background-color: #592e2e;
+                }
+
+                80% {
+                    background-color: #532e59;
+                }
+
+                100% {
+                    background-position: 0px 268px;
+                    background-color: #2e4459;
+                }
+            }
+
+            @keyframes wavy {
+                0% {
+                    transform: translateY(0px)
+                }
+
+                50% {
+                    transform: translateY(50px)
+                }
+
+                100% {
+                    transform: translateY(0px)
+                }
+            }
+        </style>
+        <script>  var keygen = new Howl({ src: ['/assets/audio/keygen_credits.ogg', '/assets/audio/keygen_credits.mp3'], volume: 0.25, loop: true }); var preload_logo = new Image(); preload_logo.src = '/assets/images/keygen-fangamer.gif'; var preload_logo_loop = new Image(); preload_logo_loop.src = '/assets/images/keygen-fangamer-loop.gif'; $(document).on('click', '.fangamer-intro', function () { keygen.play(); $('.wavy').addClass('rainbow'); $('.fangamer-intro').addClass('hidden'); $('.fangamer-credits').removeClass('hidden'); $('#center').addClass('fangamer'); setTimeout(function () { $('.logo .start').addClass('hidden'); $('.logo .loop').removeClass('hidden'); }, 2800) }); $('.wavy p').each(function () { $(this).html($(this).text().replace(/[\w\]\[\$\#\&\!\"\'\?\.\,\(\)\-]+/g, "<div class='word'>$&</div>")); }); $('.wavy p .word').each(function () { $(this).html($(this).text().replace(/[^\s]/g, "<span>$&</span>")); }); var delay = 0; $('.wavy p span').each(function () { $(this).css('animation-delay', delay + 'ms'); delay -= 50; }); var marquee_body = "<span class='credit-title'>CRACKED BY FANGAMER SEPT 2022</span><span class='credit-title'>HERE COME THE GREETS!!</span><span class='credit-title'>DELTARUNE</span><span class='credit-name'>By Toby Fox</span><span class='credit-title'>Producer and Prize Creation</span><span class='credit-name'>Erika Sielski</span><span class='credit-title'>Website and Donation Tracker</span><span class='credit-name'>Brian Coia</span><span class='credit-title'>VFX and Video</span><span class='credit-name'>Everdraed</span><span class='credit-title'>Art and Design Direction</span><span class='credit-name'>Audrey Waner</span><span class='credit-title'>Golden Bird and Mona Spamton Artist</span><span class='credit-name'>Camille Young</span><span class='credit-title'>Sprite Art</span><span class='credit-name'>Temmie</span><span class='credit-title'>Weather Character Designs</span><span class='credit-name'>Nelnal</span><span class='credit-title'>Additional Art</span><span class='credit-name'>Linnet</span><span class='credit-title'>Chapter 3 Content and Videos</span><span class='credit-name'>Sarah, Fred, Jean, Taxi</span><span class='credit-title'>MIDIs</span><span class='credit-name'>ShinkoNetCavy</span><span class='credit-title'>Technical and Legal Support</span><span class='credit-name'>Ryan Alyea</span><span class='credit-title'>Testing</span><span class='credit-name'>Reid Young</span><span class='credit-name'>Dan Moore</span><span class='credit-name'>Nathan Cranford</span>"; $("#marquee_container").append("<div class='marquee'>" + marquee_body + "</div><div class='marquee' aria-hidden='true'>" + marquee_body + "</div>");</script>
+    </main>
+    <script defer
+        src="https://deltarunesite.github.io/beacon.min.js"
+        integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+        data-cf-beacon='{"rayId":"780b3a648eed2494","version":"2022.11.3","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
