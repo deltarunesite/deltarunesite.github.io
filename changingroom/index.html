@@ -1,2 +1,85 @@
-<html lang="en"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta charset="utf-8"><meta content="width=device-width" name="viewport"><meta content="#000000" name="theme-color"><meta content="noindex" name="robots"><title>(Private...)</title><link href="/assets/css/extra.css?1668902517" rel="stylesheet" type="text/css"></head><body><main><script crossorigin="anonymous" integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"></script><script crossorigin="anonymous" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script><div id="center"><div class="changingroom"><img alt="Closed curtain" class="curtain" id="curtain" src="/assets/images/curtain-closed.png"><img alt="Open curtain" class="curtain covered" id="curtain_open" src="/assets/images/curtain-open.png"><a class="covered" href="/shadowmen/" id="shadowman"><img alt="Shadowman putting on a sock" class="centered" id="shadowman_sock" src="/assets/images/shadowman.gif"><img alt="Shadowman screaming" class="centered covered" id="shadowman_scream" src="/assets/images/shadowman-scream.png"></a><a class="covered" href="/lancer/" id="lancer"><img alt="Lancer spinning" class="centered" id="lancer_spin" src="/assets/images/lancer-spin.gif"></a></div></div><style>  .changingroom {    min-width: 320px;    max-width: 100%;    min-height: 320px;    max-height: 100%;    position: relative;    color: black;    cursor: pointer;  }  .changingroom .curtain {    position: absolute;    height: 100%;    width: 100%;    object-fit: contain;  }  .changingroom img {    image-rendering: pixelated;  }  .covered {    opacity: 0;    pointer-events: none;  }  .changingroom .centered {    position: absolute;    right: 10%;    bottom: 20%;    height: 50%;    width: 50%;    object-fit: contain;    image-rendering: pixelated;  }  #lancer .centered {    height: 15%;    width: 15%;    bottom: 35%;    right: 27%;  }</style><script>  var wing = new Howl({    src: ['/assets/audio/wing.ogg', '/assets/audio/wing.mp3'],    volume: 0.4  });    var scream = new Howl({    src: ['/assets/audio/scream.ogg', '/assets/audio/scream.mp3'],    volume: 0.4  });    $(document).on('click', '.changingroom:not(.open)', function() {    wing.play();    var r = Math.random();    $('.changingroom').addClass('open');    $('#curtain').addClass('covered');    $('#curtain_open').removeClass('covered');    if (Math.random() < 0.9) {      $('#shadowman').removeClass('covered');      setTimeout(function() {        $('#shadowman_sock').addClass('covered');        $('#shadowman_scream').removeClass('covered');        scream.play();      }, 600);      setTimeout(function() {        closeCurtain();      }, 1000);    } else {      $('.changingroom').addClass('clickable');      $('#lancer').removeClass('covered');    }  });    function closeCurtain() {    wing.play();    $('.changingroom').removeClass('open');    $('.changingroom').removeClass('clickable');    $('#curtain').removeClass('covered');    $('#curtain_open').addClass('covered');    $('#lancer').addClass('covered');    $('#shadowman').addClass('covered');    $('#shadowman_sock').removeClass('covered');    $('#shadowman_scream').addClass('covered');  }    $(document).on('click', '.changingroom.open.clickable', function() {    closeCurtain();  });    $(document).on('click', '.changingroom a', function(e) {    e.stopPropagation();  });</script></main><script defer src="https://deltarunesite.github.io/beacon.min.js" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"77fac5c8df619d4c","version":"2022.11.3","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}' crossorigin="anonymous"></script>
-</body></html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <meta content="#000000" name="theme-color">
+    <meta content="noindex" name="robots">
+    <title>(Private...)</title>
+    <link href="/assets/css/extra.css?1668902517" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <script crossorigin="anonymous"
+            integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"></script>
+        <script crossorigin="anonymous"
+            integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+        <div id="center">
+            <div class="changingroom"><img alt="Closed curtain" class="curtain" id="curtain"
+                    src="/assets/images/curtain-closed.png"><img alt="Open curtain" class="curtain covered"
+                    id="curtain_open" src="/assets/images/curtain-open.png"><a class="covered" href="/shadowmen/"
+                    id="shadowman"><img alt="Shadowman putting on a sock" class="centered" id="shadowman_sock"
+                        src="/assets/images/shadowman.gif"><img alt="Shadowman screaming" class="centered covered"
+                        id="shadowman_scream" src="/assets/images/shadowman-scream.png"></a><a class="covered"
+                    href="/lancer/" id="lancer"><img alt="Lancer spinning" class="centered" id="lancer_spin"
+                        src="/assets/images/lancer-spin.gif"></a></div>
+        </div>
+        <style>
+            .changingroom {
+                min-width: 320px;
+                max-width: 100%;
+                min-height: 320px;
+                max-height: 100%;
+                position: relative;
+                color: black;
+                cursor: pointer;
+            }
+
+            .changingroom .curtain {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+
+            .changingroom img {
+                image-rendering: pixelated;
+            }
+
+            .covered {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .changingroom .centered {
+                position: absolute;
+                right: 10%;
+                bottom: 20%;
+                height: 50%;
+                width: 50%;
+                object-fit: contain;
+                image-rendering: pixelated;
+            }
+
+            #lancer .centered {
+                height: 15%;
+                width: 15%;
+                bottom: 35%;
+                right: 27%;
+            }
+        </style>
+        <script>  var wing = new Howl({ src: ['/assets/audio/wing.ogg', '/assets/audio/wing.mp3'], volume: 0.4 }); var scream = new Howl({ src: ['/assets/audio/scream.ogg', '/assets/audio/scream.mp3'], volume: 0.4 }); $(document).on('click', '.changingroom:not(.open)', function () { wing.play(); var r = Math.random(); $('.changingroom').addClass('open'); $('#curtain').addClass('covered'); $('#curtain_open').removeClass('covered'); if (Math.random() < 0.9) { $('#shadowman').removeClass('covered'); setTimeout(function () { $('#shadowman_sock').addClass('covered'); $('#shadowman_scream').removeClass('covered'); scream.play(); }, 600); setTimeout(function () { closeCurtain(); }, 1000); } else { $('.changingroom').addClass('clickable'); $('#lancer').removeClass('covered'); } }); function closeCurtain() { wing.play(); $('.changingroom').removeClass('open'); $('.changingroom').removeClass('clickable'); $('#curtain').removeClass('covered'); $('#curtain_open').addClass('covered'); $('#lancer').addClass('covered'); $('#shadowman').addClass('covered'); $('#shadowman_sock').removeClass('covered'); $('#shadowman_scream').addClass('covered'); } $(document).on('click', '.changingroom.open.clickable', function () { closeCurtain(); }); $(document).on('click', '.changingroom a', function (e) { e.stopPropagation(); });</script>
+    </main>
+    <script defer src="https://deltarunesite.github.io/beacon.min.js"
+        integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+        data-cf-beacon='{"rayId":"77fac5c8df619d4c","version":"2022.11.3","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

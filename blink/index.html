@@ -1,2 +1,63 @@
-<html lang="en"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta charset="utf-8"><meta content="width=device-width" name="viewport"><meta content="#000000" name="theme-color"><meta content="noindex" name="robots"><title>What?</title><link href="/assets/css/extra.css?1668902517" rel="stylesheet" type="text/css"></head><body><main><script crossorigin="anonymous" integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"></script><script crossorigin="anonymous" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script><div id="center"><div class="blink"><img alt="Susie with eyes closed" class="blink1" src="/assets/images/blink1.png"><img alt="Susie with eyes open" class="blink2" src="/assets/images/blink2.png"></div></div><style>  .blink {    min-width: 320px;    max-width: 100%;    min-height: 320px;    max-height: 100%;    position: relative;    color: black;    cursor: pointer;  }  .blink img {    position: absolute;    height: 100%;    width: 100%;    object-fit: contain;    image-rendering: pixelated;  }  .blink1 {    display: block;  }  .blink2 {    opacity: 0;    z-index: 2;  }</style><script>  var blink = new Howl({    src: ['/assets/audio/blink.mp3', '/assets/audio/blink.ogg'],    volume: 0.5  });    $(document).on('click', '.blink:not(.blinking)', function() {    $(this).addClass('blinking');    openEyes();  });    $(document).on('click', '.blink.blinking', function() {    $(this).removeClass('blinking');    closeEyes();  });    function openEyes() {    $('.blink2').css('opacity', 1);    setTimeout(function() {      closeEyes();    }, (Math.floor(Math.random() * 3) + 1) * 1000);  }    function closeEyes() {    $('.blink2').css('opacity', 0);    if ($('.blinking').length > 0) {      blink.play();      setTimeout(function() {        openEyes();      }, 300);    }  }</script></main><script defer src="https://deltarunesite.github.io/beacon.min.js" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"77faf1aad9659da5","version":"2022.11.3","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}' crossorigin="anonymous"></script>
-</body></html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <meta content="#000000" name="theme-color">
+    <meta content="noindex" name="robots">
+    <title>What?</title>
+    <link href="/assets/css/extra.css?1668902517" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <script crossorigin="anonymous"
+            integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"></script>
+        <script crossorigin="anonymous"
+            integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+        <div id="center">
+            <div class="blink"><img alt="Susie with eyes closed" class="blink1" src="/assets/images/blink1.png"><img
+                    alt="Susie with eyes open" class="blink2" src="/assets/images/blink2.png"></div>
+        </div>
+        <style>
+            .blink {
+                min-width: 320px;
+                max-width: 100%;
+                min-height: 320px;
+                max-height: 100%;
+                position: relative;
+                color: black;
+                cursor: pointer;
+            }
+
+            .blink img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                image-rendering: pixelated;
+            }
+
+            .blink1 {
+                display: block;
+            }
+
+            .blink2 {
+                opacity: 0;
+                z-index: 2;
+            }
+        </style>
+        <script>  var blink = new Howl({ src: ['/assets/audio/blink.mp3', '/assets/audio/blink.ogg'], volume: 0.5 }); $(document).on('click', '.blink:not(.blinking)', function () { $(this).addClass('blinking'); openEyes(); }); $(document).on('click', '.blink.blinking', function () { $(this).removeClass('blinking'); closeEyes(); }); function openEyes() { $('.blink2').css('opacity', 1); setTimeout(function () { closeEyes(); }, (Math.floor(Math.random() * 3) + 1) * 1000); } function closeEyes() { $('.blink2').css('opacity', 0); if ($('.blinking').length > 0) { blink.play(); setTimeout(function () { openEyes(); }, 300); } }</script>
+    </main>
+    <script defer src="https://deltarunesite.github.io/beacon.min.js"
+        integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+        data-cf-beacon='{"rayId":"77faf1aad9659da5","version":"2022.11.3","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

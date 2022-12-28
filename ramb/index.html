@@ -1,2 +1,85 @@
-<html lang="en"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta charset="utf-8"><meta content="width=device-width" name="viewport"><meta content="#000000" name="theme-color"><meta content="noindex" name="robots"><title>Where could this be?</title><link href="/assets/css/extra.css?1668902517" rel="stylesheet" type="text/css"></head><body><main><script crossorigin="anonymous" integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"></script><script crossorigin="anonymous" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script><div id="center"><div class="greenroom" id="greenroom_hidden"><img alt="Mysterious door" class="greenroom-bg" src="/assets/images/greenroom-hidden.png"><button id="greenroom_door"></button></div><div class="greenroom hidden" id="greenroom"><img alt="The Green Room" class="greenroom-bg" src="/assets/images/greenroom.png"><a alt="Left door" href="/weather/" id="greenroom_left"></a><a alt="Changing room door" href="/changingroom/" id="greenroom_middle"></a><a alt="Right door" href="/tv/" id="greenroom_right"></a></div></div><style>  .greenroom {    position: relative;  }  .greenroom-bg {    width: 100%;    image-rendering: pixelated;    pointer-events: none;  }  #greenroom_door {    position: absolute;    left: 0;    top: 6%;    width: 10%;    height: 44%;    cursor: pointer;    background: none;    border: none;  }  #greenroom_left {    position: absolute;    left: 0;    top: 6%;    width: 10%;    height: 44%;  }  #greenroom_middle {    position: absolute;    right: 23.8%;    top: 6%;    width: 8%;    height: 30%;  }  #greenroom_right {    position: absolute;    right: 0;    top: 6%;    width: 10%;    height: 44%;  }</style><script>  var greenroom = new Howl({    src: ['/assets/audio/greenroom.ogg', '/assets/audio/greenroom.mp3'],    volume: 0.5,    loop: true  });    $(document).on('click', '#greenroom_door', function() {    $('#greenroom_hidden').addClass('hidden');    $('#greenroom').removeClass('hidden');    greenroom.play();    document.title = "Welcome to the Green Room!";  });</script></main><script defer src="https://deltarunesite.github.io/beacon.min.js" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"77fabb17fdae7a79","version":"2022.11.3","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}' crossorigin="anonymous"></script>
-</body></html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <meta content="#000000" name="theme-color">
+    <meta content="noindex" name="robots">
+    <title>Where could this be?</title>
+    <link href="/assets/css/extra.css?1668902517" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <script crossorigin="anonymous"
+            integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"></script>
+        <script crossorigin="anonymous"
+            integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+        <div id="center">
+            <div class="greenroom" id="greenroom_hidden"><img alt="Mysterious door" class="greenroom-bg"
+                    src="/assets/images/greenroom-hidden.png"><button id="greenroom_door"></button></div>
+            <div class="greenroom hidden" id="greenroom"><img alt="The Green Room" class="greenroom-bg"
+                    src="/assets/images/greenroom.png"><a alt="Left door" href="/weather/" id="greenroom_left"></a><a
+                    alt="Changing room door" href="/changingroom/" id="greenroom_middle"></a><a alt="Right door"
+                    href="/tv/" id="greenroom_right"></a></div>
+        </div>
+        <style>
+            .greenroom {
+                position: relative;
+            }
+
+            .greenroom-bg {
+                width: 100%;
+                image-rendering: pixelated;
+                pointer-events: none;
+            }
+
+            #greenroom_door {
+                position: absolute;
+                left: 0;
+                top: 6%;
+                width: 10%;
+                height: 44%;
+                cursor: pointer;
+                background: none;
+                border: none;
+            }
+
+            #greenroom_left {
+                position: absolute;
+                left: 0;
+                top: 6%;
+                width: 10%;
+                height: 44%;
+            }
+
+            #greenroom_middle {
+                position: absolute;
+                right: 23.8%;
+                top: 6%;
+                width: 8%;
+                height: 30%;
+            }
+
+            #greenroom_right {
+                position: absolute;
+                right: 0;
+                top: 6%;
+                width: 10%;
+                height: 44%;
+            }
+        </style>
+        <script>  var greenroom = new Howl({ src: ['/assets/audio/greenroom.ogg', '/assets/audio/greenroom.mp3'], volume: 0.5, loop: true }); $(document).on('click', '#greenroom_door', function () { $('#greenroom_hidden').addClass('hidden'); $('#greenroom').removeClass('hidden'); greenroom.play(); document.title = "Welcome to the Green Room!"; });</script>
+    </main>
+    <script defer src="https://deltarunesite.github.io/beacon.min.js"
+        integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+        data-cf-beacon='{"rayId":"77fabb17fdae7a79","version":"2022.11.3","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
